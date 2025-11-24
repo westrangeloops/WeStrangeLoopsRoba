@@ -72,13 +72,13 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W           &kp F        &kp P             &kp B                                         &kp J            &kp L              &lt 5 U      &kp Y            &mt DOUBLE_QUOTES SQT
-&mt LEFT_GUI A    &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G         &kp HOME         &kp MINUS      &kp M            &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I  &mt LEFT_GUI O
-&mt LEFT_SHIFT Z  &kp X           &kp C        &kp D             &kp V         &kp COLON        &kp SEMICOLON  &kp K            &kp H              &kp COMMA    &kp DOT          &mt QUESTION SLASH
-&mkp MB3          &mkp MB1        &mkp MB2     &lt 6 TAB         &lt 3 ESCAPE  &lt 1 SPACE      &lt 7 ENTER    &lt 2 BACKSPACE                                                   &lt 1 DEL
+&kp Q             &kp W           &kp F        &kp P             &kp B                                    &kp J        &kp L              &lt 5 U      &kp Y            &mt DOUBLE_QUOTES SQT
+&mt LEFT_GUI A    &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G      &to 3          &kp HOME       &kp M        &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I  &mt LEFT_GUI O
+&mt LEFT_SHIFT Z  &kp X           &kp C        &kp D             &kp V      &kp COLON      &kp END        &kp K        &kp H              &kp COMMA    &kp DOT          &mt QUESTION SLASH
+&kp LCTRL         &kp LEFT_SHIFT  &kp ESC      &kp LEFT_WIN      &lt 7 TAB  &kp SPACE      &kp BACKSPACE  &lt 7 ENTER                                                   &lt 3 DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_DN>;
         };
 
         FUNCTION {
@@ -92,22 +92,22 @@
 
         NUM {
             bindings = <
-&kp MINUS                   &kp N7        &kp N8        &kp N9  &kp PLUS                                                     &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SEMICOLON               &kp N4        &kp N5        &kp N6  &mt EQUAL PLUS  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp LSHFT          &kp LCTRL       &kp LALT              &kp LGUI
-&mt LEFT_SHIFT KP_NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp N3  &kp PERIOD      &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans                      &trans        &trans        &trans  &kp NUMBER_0    &kp MINUS                    &trans          &trans                                                                     &kp PIPE
+&kp NUMBER_1       &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                                                       &kp NUMBER_6     &kp N7             &kp N8          &kp N9           &kp NUMBER_0
+&kp SEMICOLON      &kp N4        &kp N5        &kp N6        &mt EQUAL PLUS  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION  &kp LSHFT          &kp LCTRL       &kp LEFT_BRACE   &kp RIGHT_BRACE
+&mt LEFT_SHIFT N0  &kp N7        &kp N8        &kp N9        &kp PERIOD      &kp EQUAL                    &trans          &kp PIPE         &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp BACKSLASH
+&trans             &trans        &trans        &trans        &kp NUMBER_0    &kp MINUS                    &trans          &trans                                                               &kp PIPE
             >;
         };
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW  &kp LC(TAB)              &trans                       &kp K_REDO  &kp K_PASTE     &kp K_COPY     &kp K_CUT       &kp K_UNDO
-&kp LGUI        &kp LALT                &kp LCTRL     &kp LSHFT                &kp END  &trans      &trans  &caps_word  &kp LEFT_ARROW  &kp UP_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans        &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans      &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP     &kp END
-&trans          &trans                  &trans        &trans                   &trans   &trans      &trans  &trans                                                     &trans
+&kp ESCAPE        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4                                &kp K_REDO  &kp K_PASTE     &kp K_COPY     &kp K_CUT       &kp K_UNDO
+&kp TAB           &kp Q         &kp W         &kp E         &kp R         &to 0          &trans         &caps_word  &kp LEFT_ARROW  &kp UP_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW
+&kp LEFT_SHIFT    &kp A         &kp S         &kp D         &kp F         &kp G          &trans         &trans      &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP     &kp END
+&kp LEFT_CONTROL  &trans        &trans        &trans        &trans        &kp SPACE      &kp BACKSPACE  &kp ENTER                                                  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&inc_dec_kp LC(C_VOLUME_UP) LC(C_VOLUME_DOWN)>;
         };
 
         MOUSE {
@@ -139,10 +139,10 @@
 
         symbol {
             bindings = <
-&kp LEFT_BRACE  &kp AMPERSAND    &kp ASTRK    &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE                                                     &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp COLON       &kp DOLLAR       &kp PERCENT  &kp CARET             &mt EQUAL PLUS         &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp LSHFT          &kp LCTRL       &kp LALT              &kp LGUI
-&kp TILDE       &kp EXCLAMATION  &kp AT       &kp HASH              &kp PIPE               &kp RCTRL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans          &trans           &trans       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER                    &trans          &trans                                                                     &kp PIPE
+&kp EXCLAMATION  &kp AT_SIGN      &kp HASH     &kp DOLLAR            &kp PERCENT                                                         &kp LCTRL         &kp AMPERSAND      &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp COLON        &kp DOLLAR       &kp PERCENT  &kp CARET             &mt EQUAL PLUS         &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp LSHFT          &kp LCTRL       &kp LALT              &kp LGUI
+&kp TILDE        &kp EXCLAMATION  &kp AT       &kp HASH              &kp PIPE               &kp RCTRL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
+&trans           &trans           &trans       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER                    &trans          &trans                                                                     &kp PIPE
             >;
         };
     };
