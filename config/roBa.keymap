@@ -78,7 +78,7 @@
 &kp LCTRL         &kp LEFT_SHIFT  &kp ESC      &kp LEFT_WIN      &lt 7 TAB  &kp SPACE      &kp BACKSPACE  &lt 2 ENTER                                                   &lt 3 DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         FUNCTION {
@@ -140,7 +140,7 @@
         symbol {
             bindings = <
 &kp EXCLAMATION  &kp AT_SIGN      &kp HASH     &kp DOLLAR            &kp PERCENT                                                         &kp LCTRL         &kp AMPERSAND      &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp COLON        &kp DOLLAR       &kp PERCENT  &kp CARET             &mt EQUAL PLUS         &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp LSHFT          &kp LCTRL       &kp LALT              &kp LGUI
+&kp COLON        &kp DOLLAR       &kp PERCENT  &kp CARET             &mt EQUAL PLUS         &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp UNDERSCORE    &kp MINUS          &kp EQUAL       &kp PLUS              &kp LGUI
 &kp TILDE        &kp EXCLAMATION  &kp AT       &kp HASH              &kp PIPE               &kp RCTRL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
 &trans           &trans           &trans       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER                    &trans          &trans                                                                     &kp PIPE
             >;
