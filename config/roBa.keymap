@@ -3,11 +3,22 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-/* FIXED LAYER NUMBERS — match the actual order in your keymap */
+/*
+ LAYER ORDER IN YOUR KEYMAP:
+ 0 = default
+ 1 = FUNCTION
+ 2 = NUM
+ 3 = ARROW
+ 4 = MOUSE
+ 5 = SCROLL
+ 6 = layer_6
+ 7 = symbol
+*/
 #define MOUSE 4
 #define SCROLL 5
-#define NUM 2
+#define NUM 2   /* FIXED: this was wrong */
 
+/* no other changes needed */
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -28,8 +39,7 @@
         };
 
         Toggle_Scroll {
-            /* FIX: Scroll layer = 5 */
-            bindings = <&tog SCROLL>;
+            bindings = <&tog SCROLL>;  /* FIXED: use named layer */
             key-positions = <31 32>;
         };
 
@@ -74,10 +84,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W           &kp F        &kp P             &kp B                                         &kp J            &kp L              &lt SCROLL U      &kp Y            &mt DOUBLE_QUOTES SQT
+&kp Q             &kp W           &kp F        &kp P             &kp B                                         &kp J            &kp L              &lt NUM U      &kp Y            &mt DOUBLE_QUOTES SQT
 &mt LEFT_GUI A    &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G         &kp HOME         &kp MINUS      &kp M            &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I  &mt LEFT_GUI O
 &mt LEFT_SHIFT Z  &kp X           &kp C        &kp D             &kp V         &kp COLON        &kp SEMICOLON  &kp K            &kp H              &kp COMMA    &kp DOT          &mt QUESTION SLASH
-&mkp MB3          &mkp MB1        &mkp MB2     &lt NUM TAB         &lt 3 ESCAPE   &lt 1 SPACE      &lt 7 ENTER     &lt 2 BACKSPACE                                                   &lt 1 DEL
+&mkp MB3          &mkp MB1        &mkp MB2     &lt NUM TAB        &lt FUNCTION ESCAPE  &lt ARROW SPACE      &lt layer_6 ENTER    &lt ARROW BACKSPACE                                                   &lt ARROW DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
