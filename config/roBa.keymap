@@ -101,13 +101,13 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4                                &kp K_REDO  &kp K_PASTE     &kp K_COPY     &kp K_CUT       &kp K_UNDO
-&kp TAB           &kp Q         &kp W         &kp E         &kp R         &to 0          &trans         &caps_word  &kp LEFT_ARROW  &kp UP_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW
-&kp LEFT_SHIFT    &kp A         &kp S         &kp D         &kp F         &kp G          &trans         &trans      &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP     &kp END
-&kp LEFT_CONTROL  &trans        &trans        &trans        &trans        &kp SPACE      &kp BACKSPACE  &kp ENTER                                                  &trans
+&kp ESCAPE        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4                          &kp K_REDO     &kp K_PASTE     &kp K_COPY    &kp K_CUT       &kp K_UNDO
+&kp TAB           &kp Q         &kp W         &kp E         &kp R         &to 0        &trans     &caps_word     &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&kp LEFT_SHIFT    &kp A         &kp S         &kp D         &kp F         &kp G        &trans     &trans         &kp LEFT        &kp DOWN      &kp RIGHT       &kp END
+&kp LEFT_CONTROL  &trans        &trans        &kp LEFT_WIN  &kp SPACE     &kp TAB      &kp ENTER  &kp BACKSPACE                                                &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(C_VOLUME_UP) LC(C_VOLUME_DOWN)>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         MOUSE {
